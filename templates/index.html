@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block page_title %} Index {% endblock %}
+
+{% block page_title_h1 %} Led Controller {% endblock %}
+
+{% block page_body %}
+
+<div class="content">
+    <form method="POST" action="{{ url_for('home_page') }}">
+        <input type="submit" name="on" value="Turn On" id="green">
+        <input type="submit" name="off" value="Turn Off" id="red">
+    </form>
+    
+    <h2> Led is <p style="{{ color }}"> {{ result }} </p></h2> <!-- Here you might see an error, but its not an error -->
+</div>
+
+{% endblock %}
